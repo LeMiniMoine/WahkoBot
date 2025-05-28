@@ -20,6 +20,8 @@ RUN set -eux; \
         jq \
         # ssh repo support
         openssh-client \
+        # netcat to dploy for free on render
+        netcat-openbsd \
     ; \
     rm -rf /var/lib/apt/lists/*; \
 # Set up all three config locations
@@ -45,7 +47,9 @@ ENV PCX_DISCORDBOT_BUILD=${PCX_DISCORDBOT_BUILD} PCX_DISCORDBOT_COMMIT=${PCX_DIS
 
 COPY root/ /
 
-CMD ["/app/start-redbot.sh"]
+EXPOSE 10000
+
+CMD sh -c 'while true; do echo -e "HTTP/1.1 200 OK\r\nContent-Length: 2\r\n\r\nOK" | nc -l -p 10000; done & exec /app/start-redbot.sh'
 
 #######################################################################################
 
@@ -81,7 +85,9 @@ ENV PCX_DISCORDBOT_BUILD=${PCX_DISCORDBOT_BUILD} PCX_DISCORDBOT_COMMIT=${PCX_DIS
 
 COPY root/ /
 
-CMD ["/app/start-redbot.sh"]
+EXPOSE 10000
+
+CMD sh -c 'while true; do echo -e "HTTP/1.1 200 OK\r\nContent-Length: 2\r\n\r\nOK" | nc -l -p 10000; done & exec /app/start-redbot.sh'
 
 #######################################################################################
 
@@ -106,7 +112,9 @@ ENV PCX_DISCORDBOT_BUILD=${PCX_DISCORDBOT_BUILD} PCX_DISCORDBOT_COMMIT=${PCX_DIS
 
 COPY root/ /
 
-CMD ["/app/start-redbot.sh"]
+EXPOSE 10000
+
+CMD sh -c 'while true; do echo -e "HTTP/1.1 200 OK\r\nContent-Length: 2\r\n\r\nOK" | nc -l -p 10000; done & exec /app/start-redbot.sh'
 
 #######################################################################################
 
@@ -131,7 +139,9 @@ ENV PCX_DISCORDBOT_BUILD=${PCX_DISCORDBOT_BUILD} PCX_DISCORDBOT_COMMIT=${PCX_DIS
 
 COPY root/ /
 
-CMD ["/app/start-redbot.sh"]
+EXPOSE 10000
+
+CMD sh -c 'while true; do echo -e "HTTP/1.1 200 OK\r\nContent-Length: 2\r\n\r\nOK" | nc -l -p 10000; done & exec /app/start-redbot.sh'
 
 #######################################################################################
 
@@ -158,7 +168,9 @@ ENV PYLAV__DATA_FOLDER=/data/pylav PYLAV__YAML_CONFIG=/data/pylav/pylav.yaml PYL
 
 COPY root/ /
 
-CMD ["/app/start-redbot.sh"]
+EXPOSE 10000
+
+CMD sh -c 'while true; do echo -e "HTTP/1.1 200 OK\r\nContent-Length: 2\r\n\r\nOK" | nc -l -p 10000; done & exec /app/start-redbot.sh'
 
 #######################################################################################
 
@@ -185,4 +197,6 @@ ENV PYLAV__DATA_FOLDER=/data/pylav PYLAV__YAML_CONFIG=/data/pylav/pylav.yaml PYL
 
 COPY root/ /
 
-CMD ["/app/start-redbot.sh"]
+EXPOSE 10000
+
+CMD sh -c 'while true; do echo -e "HTTP/1.1 200 OK\r\nContent-Length: 2\r\n\r\nOK" | nc -l -p 10000; done & exec /app/start-redbot.sh'
