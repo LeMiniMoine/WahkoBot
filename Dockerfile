@@ -49,7 +49,7 @@ COPY root/ /
 
 EXPOSE 10000
 
-CMD sh -c 'while true; do echo -e "HTTP/1.1 200 OK\r\nContent-Length: 2\r\n\r\nOK" | nc -l -p 10000; done & exec /app/start-redbot.sh'
+CMD sh -c 'while true; do echo -e "HTTP/1.1 200 OK\r\nContent-Length: 2\r\n\r\nOK" | nc -l -p 10000 -s 0.0.0.0; done & exec /app/start-redbot.sh'
 
 #######################################################################################
 
@@ -87,7 +87,7 @@ COPY root/ /
 
 EXPOSE 10000
 
-CMD sh -c 'while true; do echo -e "HTTP/1.1 200 OK\r\nContent-Length: 2\r\n\r\nOK" | nc -l -p 10000; done & exec /app/start-redbot.sh'
+CMD sh -c 'while true; do echo -e "HTTP/1.1 200 OK\r\nContent-Length: 2\r\n\r\nOK" | nc -l -p 10000 -s 0.0.0.0; done & exec /app/start-redbot.sh'
 
 #######################################################################################
 
@@ -114,7 +114,7 @@ COPY root/ /
 
 EXPOSE 10000
 
-CMD sh -c 'while true; do echo -e "HTTP/1.1 200 OK\r\nContent-Length: 2\r\n\r\nOK" | nc -l -p 10000; done & exec /app/start-redbot.sh'
+CMD sh -c 'while true; do echo -e "HTTP/1.1 200 OK\r\nContent-Length: 2\r\n\r\nOK" | nc -l -p 10000 -s 0.0.0.0; done & exec /app/start-redbot.sh'
 
 #######################################################################################
 
@@ -141,7 +141,7 @@ COPY root/ /
 
 EXPOSE 10000
 
-CMD sh -c 'while true; do echo -e "HTTP/1.1 200 OK\r\nContent-Length: 2\r\n\r\nOK" | nc -l -p 10000; done & exec /app/start-redbot.sh'
+CMD sh -c 'while true; do echo -e "HTTP/1.1 200 OK\r\nContent-Length: 2\r\n\r\nOK" | nc -l -p 10000 -s 0.0.0.0; done & exec /app/start-redbot.sh'
 
 #######################################################################################
 
@@ -170,7 +170,7 @@ COPY root/ /
 
 EXPOSE 10000
 
-CMD sh -c 'while true; do echo -e "HTTP/1.1 200 OK\r\nContent-Length: 2\r\n\r\nOK" | nc -l -p 10000; done & exec /app/start-redbot.sh'
+CMD sh -c 'while true; do echo -e "HTTP/1.1 200 OK\r\nContent-Length: 2\r\n\r\nOK" | nc -l -p 10000 -s 0.0.0.0; done & exec /app/start-redbot.sh'
 
 #######################################################################################
 
@@ -199,4 +199,4 @@ COPY root/ /
 
 EXPOSE 10000
 
-CMD sh -c 'while true; do echo -e "HTTP/1.1 200 OK\r\nContent-Length: 2\r\n\r\nOK" | nc -l -p 10000; done & exec /app/start-redbot.sh'
+CMD sh -c 'while true; do echo -e "HTTP/1.1 200 OK\r\nContent-Length: 2\r\n\r\nOK" | nc -l -p 10000 -s 0.0.0.0; done & exec /app/start-redbot.sh'
