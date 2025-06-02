@@ -32,7 +32,7 @@ wait_term() {
 FIRST_RUN=1
 RETURN_CODE=26
 
-COGS_TO_LOAD="--load keepalive"
+COGS_TO_LOAD="--load keepalive --load setupserver"
 
 while [ "${RETURN_CODE}" -eq 26 ]; do
     # Update redbot if needed
