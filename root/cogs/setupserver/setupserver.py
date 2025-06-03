@@ -29,7 +29,10 @@ class SetupServer(commands.Cog):
             return await guild.create_category(name)
 
         async def create_text_channel(cat, name, overwrites=None):
-            return await guild.create_text_channel(name, category=cat, overwrites=overwrites)
+            kwargs = {"category": cat}
+            if overwrites is not None:
+                kwargs["overwrites"] = overwrites
+            return await guild.create_text_channel(name, **kwargs)
 
         read_only_overwrites = {
             guild.default_role: discord.PermissionOverwrite(send_messages=False, read_messages=True)
