@@ -4,5 +4,5 @@ import os
 
 from .setupserver import SetupServer
 
-def setup(bot):
+async def setup(bot):
     bot.add_cog(SetupServer(bot))
