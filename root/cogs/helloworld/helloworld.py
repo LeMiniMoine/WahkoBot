@@ -1,7 +1,7 @@
 import discord
 from redbot.core import commands
 
-class HelloWolrd(commands.Cog):
+class HelloWorld(commands.Cog):
     """A simple test command cog."""
 
     def __init__(self, bot):
